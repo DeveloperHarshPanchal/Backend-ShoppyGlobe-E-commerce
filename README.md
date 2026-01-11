@@ -1,70 +1,45 @@
-🛒 ShoppyGlobe Backend API
-📌 Project Overview
+Shoppy Globe Backend
+This is the backend for Shoppy Globe, a e-commerce platform. It is built using Node.js and MongoDB.
 
-ShoppyGlobe is an e-commerce backend application built using Node.js, Express.js, and MongoDB.
-This project provides RESTful APIs for managing products, user authentication, and shopping cart functionality with JWT-based authentication.
-
-🛠 Tech Stack
-
-Node.js
-
-Express.js
-
+Links
+Github
+Setup
+Prerequisites
+Node.js (v20 or higher)
 MongoDB
+Docker (optional)
+Installation
+Clone the repository:
 
-Mongoose
+git clone https://github.com/KiranNamawar/demo-shoppy-globe-backend.git
+cd demo-shoppy-globe-backend
+Install dependencies:
 
-JWT (JSON Web Token)
-
-ThunderClient (API Testing)
-⚙️ Installation & Setup
-1️⃣ Clone Repository
-git clone <your-github-repo-link>
-cd shoppyglobe-backend
-
-2️⃣ Install Dependencies
 npm install
+Set up environment variables:
 
+cp .env.example .env
+Edit the .env file with your database connection string and other required configurations.
 
-🧪 API Testing
+Docker Setup (optional)
+Start the MongoDB container:
+npm run db:start
+Seeding the Database
+Seed the database with sample products:
+npm run db:seed
+Starting the Server
+Start the server:
+npm run start
+API Endpoints
+GET /products - Get all products
+GET /products/:productId - Get a single product
+POST /register - Register a new user
+POST /login - Login and get a JWT token
+Protected Endpoints
+Requires AccessToken in Authorization header with Bearer prefix for following endpoints:
 
-All APIs are tested using ThunderClient.
-Screenshots of:
-
-User Registration
-
-User Login
-
-Products APIs
-
-Cart APIs
-are included for submission.
-
-🗄 MongoDB Collections
-
-The following collections are created automatically:
-
-users
-
-products
-
-carts
-
-Screenshots from MongoDB Compass are included as proof.
-
-✅ Features Implemented
-
-RESTful API structure
-
-MongoDB CRUD operations
-
-JWT-based authentication
-
-Protected cart routes
-
-Error handling & validation
-
-ThunderClient testing
-
-4️⃣ Start Server
-npm run dev
+POST /cart - Add a product to the cart
+PUT /cart/:productId - Update the quantity of a product in the cart
+DELETE /cart/:productId - Remove a product from the cart
+Error Handling
+The API follows RESTful practices and returns appropriate HTTP status codes and error messages.
