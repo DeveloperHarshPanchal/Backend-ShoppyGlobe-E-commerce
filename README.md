@@ -24,13 +24,11 @@ To build a functional e-commerce application that allows users to:
 ```bash
 git clone https://github.com/DeveloperHarshPanchal/Backend-ShoppyGlobe-E-commerce
 
-### Install dependencies
-
-```bash
 npm install
-## Starting the Server
 
-### Start the server
-```bash
+---
+
 npm run start
+
+
 
